@@ -1,0 +1,14 @@
+# method 1: use "unset key" to erase a legend
+#plot 'text1' u 1:2 w l
+#unset key
+#replot
+
+# method 2:
+#set key at graph 0.5, graph 0.9
+#plot sin(x) notitle, 'text1' u 1:2 title "simple"
+
+# how to locate key?
+# Available choices are : left, right , top, bottom, outside, below.
+# we can combine some of them
+set key left top
+plot sin(x) notitle, 'text1' u 1:2 title "simple"
