@@ -1,0 +1,55 @@
+# change the appearance of tics of axis
+#set xtics 2    # this number means the increment
+#set ytics -600,200,600 # -600 is the first value, 200 is the interval, 600 is the last number
+#plot x**3
+
+
+# set minor tics. default doesn't have minor tics
+#set mxtics 2  # this number means how many minor tics in one major interval
+#set mytics 3
+#replot
+
+
+# replace numbers of tics with words
+#set yrange [0:4]
+#set ytics  1
+#set mytics 2
+#set mxtics 2   # minor tics for xaxis are ignored even already set
+#set xtics ("April" 1, "May" 2, "June" 3, "July" 4)
+#plot 'text4' using 1:2:3 notitle with boxes, \
+#"text4" using 1:2 notitle with lines
+
+
+# set length of tics
+#unset key
+#set xtics 2   
+#set ytics -900,300,900
+#set mxtics 2 
+#set mytics 3
+#set ytics scale 1.2,0.9  # the major tics are multiplied by the first number, and the minor the second one
+## for defaul, the length of minor tics is half that of major tics
+#set tics out  # set both x & y tics out
+#set xtics out # set xtics out
+#set xtics nomirror  # ignore the tics on top of the graph
+#set ytics nomirror   # ignore the tics at right hand of the graph
+##set ytics axis # put the ytics on the yaxis
+#set xtics offset graph 0, graph -0.01  # this command change the position of xtics texts
+#set ytics offset graph -0.01, graph 0  # this command change the position of ytics text
+#unset mxtics  # ignore mxtics
+#plot x**3
+
+
+# how to set x2tics and y tics
+unset xtics
+unset ytics
+set y2tics -900,300,900
+set x2tics 2   
+set mx2tics 2 
+set my2tics 3
+set y2tics scale 1.2,0.9  # the major tics are multiplied by the first number, and the minor the second one
+set y2tics out
+set x2tics out
+plot x**3 notitle
+
+
+# learn more by "help set tics" & "help set xtics"
