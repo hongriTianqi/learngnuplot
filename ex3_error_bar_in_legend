@@ -1,0 +1,8 @@
+set xrange [0:4]
+set yrange [0:3]
+set style line 1 lt 3 lw 2                         # Make a frame-box
+set key box linestyle 1                            # define the linestyle
+#plot 'text3' u 1:2:3 w yerrorbars     # unsatisfied
+plot 'text3' u 1:2:3 notitle w yerrorbars pt 17   , \
+"text3" u 1:2 title "data" w points pt 17  # get rid of error bars in a legend
+
