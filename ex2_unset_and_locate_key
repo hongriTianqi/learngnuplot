@@ -1,3 +1,4 @@
+# key means legend in gnuplot
 # method 1: use "unset key" to erase a legend
 #plot 'text1' u 1:2 w l
 #unset key
